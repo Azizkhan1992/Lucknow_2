@@ -1,22 +1,18 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import Vue from "vue";
+import Vuex from "vuex";
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    isNavActive: false
+    isNavActive: false,
   },
-  getters: {
-  },
+  getters: {},
   mutations: {
-    changeNav(state){
-      state.isNavActive = !state.isNavActive
-      console.log(state.isNavActive)
-    }
+    changeNav(state) {
+      state.isNavActive = !state.isNavActive;
+    },
   },
-  actions: {
-  },
-  modules: {
-  }
-})
+  actions: {},
+  modules: {},
+});

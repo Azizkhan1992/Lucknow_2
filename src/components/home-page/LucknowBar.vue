@@ -1,9 +1,9 @@
 <template>
     <div class="barContainer">
-        <swiper :slides-per-view="items" :space-between="15" :autoplay="true" :loop="true" @swiper="onSwiper" @slideChange="onSlideChange">
+        <swiper :slides-per-view="items" :space-between="15" :autoplay="true" :loop="true" @swiper="onSwiper"
+            @slideChange="onSlideChange">
             <swiper-slide v-for="slide in barItems" :key="slide.id" class="test">
-                <img :src="require('../../assets/images/' + slide.img)" 
-                    class="img-fluid" blank="true">
+                <img :src="require('../../assets/images/' + slide.img)" class="img-fluid" blank="true">
                 <p>{{ slide.name }}</p>
             </swiper-slide>
         </swiper>
@@ -19,7 +19,7 @@ SwiperCore.use([Navigation, Pagination, Autoplay])
 export default {
     name: 'lucknow-bar',
     components: { Swiper, SwiperSlide },
-    props:{
+    props: {
         items: {
             type: [Number, String],
             default: 6
@@ -73,9 +73,9 @@ export default {
 </script>
 <style lang="scss">
 .barContainer {
-    .swiper-container{
+    .swiper-container {
 
-        .swiper-slide{
+        .swiper-slide {
             width: 100px;
             height: 140px;
             display: flex;
@@ -87,16 +87,16 @@ export default {
             box-sizing: border-box;
             transition: 0.12s linear;
 
-            &:hover{
+            &:hover {
                 background: #fff;
                 box-shadow: 0px 4px 46px rgba(0, 0, 0, 0.1);
 
-                p{
+                p {
                     color: #000000;
                 }
             }
 
-            p{
+            p {
                 margin: 0;
                 font-size: 0.85rem;
                 line-height: 46px;
@@ -104,7 +104,7 @@ export default {
                 color: #585858;
             }
 
-            img{
+            img {
                 width: 62px;
                 height: 52px;
                 object-fit: contain;
@@ -133,19 +133,19 @@ export default {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1200px) {
-    .barContainer{
-        .swiper-container{
-            .swiper-slide{
+    .barContainer {
+        .swiper-container {
+            .swiper-slide {
                 height: 130px !important;
                 padding: 12px 8px !important;
                 row-gap: 4px !important;
 
-                p{
+                p {
                     font-size: 0.65rem !important;
                     line-height: 42px !important;
                 }
 
-                img{
+                img {
                     width: 68px !important;
                     height: 64px !important;
                 }
@@ -155,14 +155,14 @@ export default {
 }
 
 @media screen and (min-width: 1441px) {
-    .barContainer{
-        .swiper-container{
-            .swiper-slide{
+    .barContainer {
+        .swiper-container {
+            .swiper-slide {
                 height: 240px !important;
                 border-radius: 120px !important;
-                row-gap: 12px ;
+                row-gap: 12px;
 
-                img{
+                img {
                     width: 116px !important;
                     height: 108px !important;
                 }

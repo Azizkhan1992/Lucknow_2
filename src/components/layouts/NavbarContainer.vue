@@ -261,44 +261,47 @@ export default {
 @media screen and (max-width: 1200px) and (min-width: 768px) {
     .navbarContainer {
 
-        .navLink{
+        .navLink {
             column-gap: 8px !important;
             font-size: 0.65rem !important;
             z-index: 199;
         }
-        .navbarBottom{
+
+        .navbarBottom {
             height: 174px !important;
 
-            .middleCircle{
+            .middleCircle {
                 width: 28px !important;
                 height: 28px !important;
                 left: 12px !important;
             }
 
-            .purpleCircle{
+            .purpleCircle {
                 width: 64px !important;
                 height: 64px !important;
             }
 
-            .blueCircle{
+            .blueCircle {
                 width: 52px !important;
                 height: 52px !important;
                 left: 60px !important;
                 top: 52px !important;
             }
 
-            .navCard{
+            .navCard {
                 height: 112px !important;
 
-                p{
+                p {
                     width: 100% !important;
                     font-size: 0.85rem !important;
                 }
-                span{
+
+                span {
                     font-size: 0.65rem !important;
                 }
             }
-            img.man{
+
+            img.man {
                 max-width: 142px !important;
                 bottom: 48px !important;
                 left: -8px !important;
@@ -308,42 +311,42 @@ export default {
 }
 
 @media screen and (max-width: 767px) {
-    .navbarContainer{
-        .navbarBottom{
+    .navbarContainer {
+        .navbarBottom {
             height: 140px !important;
 
-            .smallCircle{
+            .smallCircle {
                 background: #eaf1fe !important;
             }
 
-            .middleCircle{
+            .middleCircle {
                 background: #eaf1fe !important;
                 top: 8px !important;
             }
 
-            .blueCircle{
+            .blueCircle {
                 top: 24px !important;
                 left: 96px !important;
             }
 
-            .navCard{
+            .navCard {
                 height: 100px !important;
                 background: #eaf1fe;
 
-                p{
+                p {
                     font-size: 0.85rem !important;
                 }
 
-                span{
+                span {
                     font-size: 0.65rem !important;
                 }
             }
-            img.man{
+
+            img.man {
                 max-width: 90px !important;
                 bottom: 50px !important;
                 left: 64px !important;
             }
         }
     }
-}
-</style>
+}</style>

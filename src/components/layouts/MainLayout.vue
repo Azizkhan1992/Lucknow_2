@@ -1,17 +1,17 @@
 <template>
     <div class="mainLayout">
-        <BIconJustify class="mob" @click="change"/>
+        <BIconJustify class="mob" @click="change" />
         <b-row>
-                <b-col sm="2"  md="2" xl="2" class="desctopNav">
-                    <NavbarContainer/>
-                </b-col>
-                <b-col class="mobileCol" :class="$store.state.isNavActive ? 'active' : 'deactive'">
-                    <NavbarContainer/>
-                </b-col>
-                <b-col sm="12" md="10" xl="10">
-                    <router-view/>
-                </b-col>
-            </b-row>
+            <b-col sm="2" md="2" xl="2" class="desctopNav">
+                <NavbarContainer />
+            </b-col>
+            <b-col class="mobileCol" :class="$store.state.isNavActive ? 'active' : 'deactive'">
+                <NavbarContainer />
+            </b-col>
+            <b-col sm="12" md="10" xl="10">
+                <router-view />
+            </b-col>
+        </b-row>
     </div>
 </template>
 <script>
@@ -19,40 +19,40 @@ import NavbarContainer from './NavbarContainer.vue'
 import { BIconJustify } from 'bootstrap-vue';
 export default {
     name: 'main-layout',
-    components: {NavbarContainer, BIconJustify},
+    components: { NavbarContainer, BIconJustify },
     methods: {
-        change(){
+        change() {
             this.$store.commit('changeNav')
         }
     }
 }
 </script>
 <style lang="scss">
-.mainLayout{
+.mainLayout {
     padding: 53px 65px 53px 35px;
     box-sizing: border-box;
     background: #eaf1fe;
     box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.35), inset 5px 5px 10px rgba(255, 255, 255, 0.35);
     border-radius: 40px;
 
-    .mob{
+    .mob {
         display: none !important;
     }
 
-    .desctopNav{
+    .desctopNav {
         display: block;
     }
 
-    .mobileCol{
+    .mobileCol {
         display: none;
     }
 }
 
 @media screen and (max-width: 767px) {
-    .mainLayout{
+    .mainLayout {
         padding: 35px !important;
 
-        .mob{
+        .mob {
             display: block !important;
             cursor: pointer;
             position: fixed;
@@ -62,7 +62,8 @@ export default {
             z-index: 499;
         }
     }
-    .mobileCol{
+
+    .mobileCol {
         position: fixed;
         z-index: 99;
         top: 0;
@@ -74,24 +75,23 @@ export default {
         background: #eaf1fe;
 
 
-        &.deactive{
+        &.deactive {
             transform: scaleX(0);
         }
 
-        &.active{
+        &.active {
             transform: scaleX(1);
         }
 
-        .navbarContainer{
+        .navbarContainer {
             row-gap: 20px !important;
             background: #fff;
             padding: 50px 12px !important;
         }
     }
-    .desctopNav{
+
+    .desctopNav {
         display: none !important;
     }
 }
-
-
 </style>

@@ -17,7 +17,7 @@ export default {
 }
 </script>
 <style lang="scss">
-.sliceLogoContainer{
+.sliceLogoContainer {
     width: 100%;
     max-width: 420px;
     height: 140px;
@@ -31,24 +31,24 @@ export default {
     row-gap: 6px;
     position: relative;
 
-    img.cheese{
+    img.cheese {
         position: absolute;
         bottom: 32px;
         right: -18px;
     }
 
-    img.apple{
+    img.apple {
         position: absolute;
         top: -36px;
     }
 
-    img.orange{
+    img.orange {
         position: absolute;
         top: 12px;
         right: 112px;
     }
 
-    .fire{
+    .fire {
         width: 24px;
         height: 24px;
         display: flex;
@@ -61,13 +61,13 @@ export default {
         right: 148px;
     }
 
-    img.burger{
+    img.burger {
         position: absolute;
         bottom: -12px;
         right: -100px;
     }
 
-    p{
+    p {
         font-size: 1.5rem;
         line-height: 28px;
         font-weight: 700;
@@ -75,7 +75,7 @@ export default {
         margin: 0;
     }
 
-    span{
+    span {
         font-size: 0.85rem;
         line-height: 16px;
         font-weight: 600;
@@ -84,29 +84,29 @@ export default {
 }
 
 @media screen and (min-width: 1441px) {
-    .sliceLogoContainer{
+    .sliceLogoContainer {
         height: 240px !important;
         row-gap: 12px !important;
 
-        p{
+        p {
             font-size: 3rem !important;
         }
 
-        span{
+        span {
             font-size: 1.15rem !important;
         }
 
-        img.burger{
+        img.burger {
             transform: scale(1.5);
             bottom: 64px !important;
             right: -80px !important;
         }
 
-        .fire{
+        .fire {
             right: 210px !important;
         }
 
-        img.orange{
+        img.orange {
             top: 24px !important;
             right: 230px !important;
         }
@@ -114,50 +114,50 @@ export default {
 }
 
 @media screen and (max-width: 1200px) and (min-width: 768px) {
-    .sliceLogoContainer{
+    .sliceLogoContainer {
         height: 130px !important;
         padding: 0 0 16px 8px !important;
         row-gap: 4px !important;
         border-radius: 20px !important;
 
-        .fire{
+        .fire {
             width: 18px !important;
             height: 18px !important;
             right: 70px !important;
             top: -24px !important;
 
-            img{
+            img {
                 transform: scale(0.65);
             }
         }
 
-        img.burger{
+        img.burger {
             transform: scale(0.55);
             bottom: -36px !important;
             right: -136px !important;
         }
 
-        img.apple{
+        img.apple {
             transform: scale(0.5);
             left: -12px;
         }
 
-        img.orange{
+        img.orange {
             transform: scale(0.5);
             right: 48px !important;
             top: -6px !important;
         }
 
-        img.cheese{
+        img.cheese {
             transform: scale(0.55);
         }
 
-        p{
+        p {
             font-size: 1rem !important;
             line-height: 18px !important;
         }
 
-        span{
+        span {
             font-size: 0.75rem !important;
             line-height: 12px !important;
         }
@@ -165,10 +165,11 @@ export default {
 }
 
 @media screen and (max-width: 767px) {
-    .sliceLogoContainer{
+    .sliceLogoContainer {
         width: 100% !important;
         max-width: 100%;
-        img.burger{
+
+        img.burger {
             transform: scale(0.85);
             right: -100px !important;
             bottom: -24px;

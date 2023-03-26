@@ -11,14 +11,12 @@
         <div class="articlesWrapper">
             <b-row align-h="between" v-for="article in articles" :key="article.id">
                 <b-col cols="3">
-                    <div class="item"
-                    :class="article.id == 1 ? 'chickArt' : '' ||
-                    article.id == 2 ? 'maskArt' : '' ||
-                    article.id == 3 ? 'breadArt' : '' ||
-                    article.id == 4 ? 'pizzaArt' : ''
-                    "
-                    >
-                        <img :src="require('../../assets/images/'+article.artImg)" alt="">
+                    <div class="item" :class="article.id == 1 ? 'chickArt' : '' ||
+                        article.id == 2 ? 'maskArt' : '' ||
+                            article.id == 3 ? 'breadArt' : '' ||
+                                article.id == 4 ? 'pizzaArt' : ''
+                    ">
+                        <img :src="require('../../assets/images/' + article.artImg)" alt="">
                     </div>
                 </b-col>
 
@@ -29,9 +27,9 @@
 
                     <b-row>
                         <div class="titleWrapper">
-                            <img :src="require('../../assets/images/'+article.img1)" alt="" class="img">
+                            <img :src="require('../../assets/images/' + article.img1)" alt="" class="img">
 
-                            <img :src="require('../../assets/images/'+article.img2)" alt="" class="img">
+                            <img :src="require('../../assets/images/' + article.img2)" alt="" class="img">
 
                             <div class="likes">
                                 <img src="../../assets/images/signal.svg" alt="">
@@ -49,8 +47,8 @@ import { BIconArrowRight } from 'bootstrap-vue';
 export default {
     name: 'home-articles',
     components: { BIconArrowRight },
-    data(){
-        return{
+    data() {
+        return {
             articles: [
                 {
                     id: 1,
@@ -101,11 +99,11 @@ export default {
 
         .row {
 
-            .titleWrapper{
+            .titleWrapper {
                 position: relative;
                 display: flex;
 
-                .likes{
+                .likes {
                     position: absolute;
                     left: 52px;
                     background: #fff8d5;
@@ -116,28 +114,28 @@ export default {
                     align-items: center;
                     column-gap: 6px;
 
-                    span{
+                    span {
                         font-size: 0.65rem;
                         line-height: 12px;
                         font-weight: 500;
                     }
                 }
 
-                img.img{
+                img.img {
                     padding: 2px;
                     box-sizing: border-box;
                     background: #fff;
                     border-radius: 50%;
 
-                    &:nth-child(2){
+                    &:nth-child(2) {
                         position: absolute;
                         left: 32px;
                     }
                 }
             }
 
-            .titleCol{
-                p{
+            .titleCol {
+                p {
                     font-size: 0.75rem;
                     line-height: 18px;
                     font-weight: 700;
@@ -154,15 +152,15 @@ export default {
                 align-items: center;
                 justify-content: center;
 
-                &.pizzaArt{
+                &.pizzaArt {
                     background: #c1fff4;
                 }
 
-                &.breadArt{
+                &.breadArt {
                     background: #ffddf0;
                 }
 
-                &.maskArt{
+                &.maskArt {
                     background: #d6f5ff;
                 }
 
@@ -200,28 +198,28 @@ export default {
 
 
 @media screen and (max-width: 1200px) and (min-width: 768px) {
-    .articlesContainer{
-        h3{
+    .articlesContainer {
+        h3 {
             font-size: 1.25rem !important;
         }
 
-        .articlesWrapper{
+        .articlesWrapper {
             row-gap: 32px;
             margin-top: 72px !important;
 
-            .titleCol{
+            .titleCol {
 
-                p{
+                p {
                     font-size: 0.55rem !important;
                     line-height: 14px !important;
                 }
             }
 
-            .item{
+            .item {
                 width: 38px !important;
                 height: 38px !important;
 
-                img{
+                img {
                     max-width: 28px !important;
                 }
             }
@@ -230,7 +228,7 @@ export default {
 }
 
 @media screen and (max-width: 767px) {
-    .articlesContainer{
+    .articlesContainer {
         margin-top: 48px;
         padding-bottom: 12px;
         box-sizing: border-box;

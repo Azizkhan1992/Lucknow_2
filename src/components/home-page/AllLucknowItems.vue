@@ -7,8 +7,8 @@
 
         <div class="ItemsWrapper">
             <b-row class="lunchRows" v-for="item in items" :key="item.id" :class="item.id == 1 ? 'firstRow' : 'secondRow'">
-                <b-col v-for="lunch in item.title" :key="lunch.id" md="4" lg="4" xl="4" :class="lunch.id == 2 ? 'center' : ''"
-                    class="lunchCols">
+                <b-col v-for="lunch in item.title" :key="lunch.id" md="4" lg="4" xl="4"
+                    :class="lunch.id == 2 ? 'center' : ''" class="lunchCols">
                     <div class="lunch">
                         <img :src="require('../../assets/images/' + lunch.img)" alt="">
 
@@ -44,7 +44,7 @@
 import { Icon } from '@iconify/vue2';
 export default {
     name: 'all-items',
-    components: {Icon},
+    components: { Icon },
     data() {
         return {
             items: [
@@ -117,8 +117,8 @@ export default {
 
                 .lunchCols {
 
-                    &.center{
-                        .lunch{
+                    &.center {
+                        .lunch {
                             height: 152px;
                             background: #f2eeee;
                         }
@@ -139,11 +139,11 @@ export default {
                         box-sizing: border-box;
                         position: relative;
 
-                        img{
+                        img {
                             max-width: 160px;
                         }
 
-                        .fire{
+                        .fire {
                             width: 24px;
                             height: 24px;
                             border-radius: 50%;
@@ -156,7 +156,7 @@ export default {
                             right: -8px;
                         }
 
-                        .like{
+                        .like {
                             width: 24px;
                             height: 24px;
                             display: flex;
@@ -169,20 +169,20 @@ export default {
                             right: -8px;
                         }
 
-                        
 
-                        .lunchTitle{
 
-                            .priceItems{
+                        .lunchTitle {
+
+                            .priceItems {
                                 display: flex;
                                 align-items: center;
                                 justify-content: space-between;
 
-                                svg{
+                                svg {
                                     cursor: pointer;
                                 }
 
-                                span{
+                                span {
                                     font-size: 0.75rem;
                                     line-height: 18px;
                                     font-weight: 800;
@@ -191,7 +191,7 @@ export default {
                             }
                         }
 
-                        h4{
+                        h4 {
                             font-size: 0.75rem;
                             line-height: 14px;
                             font-weight: 800;
@@ -199,7 +199,7 @@ export default {
                             margin: 0;
                         }
 
-                        p{
+                        p {
                             font-size: 0.55rem;
                             line-height: 18px;
                             font-weight: 600;
@@ -212,16 +212,17 @@ export default {
 
             &.secondRow {
                 position: relative;
-                .lunchCols{
+
+                .lunchCols {
                     padding-top: 30px;
 
-                    &:nth-child(2){
-                        .lunch{
+                    &:nth-child(2) {
+                        .lunch {
                             height: 90px;
                         }
                     }
 
-                    .lunch{
+                    .lunch {
                         width: 170px;
                         height: 70px;
                         position: absolute;
@@ -232,12 +233,12 @@ export default {
                         align-items: center;
                         justify-content: center;
 
-                        img{
+                        img {
                             margin-left: 24px;
                             margin-bottom: 24px;
                         }
 
-                        .star{
+                        .star {
                             width: 24px;
                             height: 24px;
                             display: flex;
@@ -249,13 +250,13 @@ export default {
                             top: -24px;
                             right: -8px;
 
-                            img{
+                            img {
                                 margin-left: 0;
                                 margin-bottom: 0;
                             }
                         }
 
-                        img{
+                        img {
                             max-width: 160px;
                         }
                     }
@@ -281,38 +282,38 @@ export default {
 }
 
 @media screen and (min-width: 1441px) {
-    .allItemsContainer{
+    .allItemsContainer {
 
-        .ItemsWrapper{
+        .ItemsWrapper {
 
-            .lunchRows{
+            .lunchRows {
 
-                .lunchCols{
+                .lunchCols {
 
-                    .lunch{
+                    .lunch {
                         max-width: 280px !important;
                     }
 
-                    &:nth-child(2){
+                    &:nth-child(2) {
                         display: flex;
                         justify-content: center;
                     }
 
-                    &:nth-child(3){
+                    &:nth-child(3) {
                         display: flex;
                         justify-content: flex-end;
                     }
                 }
 
-                &.secondRow{
+                &.secondRow {
 
-                    .lunchCols{
+                    .lunchCols {
 
-                        .lunch{
+                        .lunch {
                             bottom: -86px !important;
                             width: 280px !important;
 
-                            .star{
+                            .star {
                                 top: -24px !important;
                                 right: -8px;
                             }
@@ -325,29 +326,29 @@ export default {
 }
 
 @media screen and (max-width: 1200px) and (min-width: 768px) {
-    .allItemsContainer{
+    .allItemsContainer {
         padding-bottom: 12px;
         box-sizing: border-box;
 
-        .ItemsTitle{
+        .ItemsTitle {
             margin-top: 12px;
 
-            h3{
+            h3 {
                 font-size: 1.25rem !important;
             }
         }
 
-        .ItemsWrapper{
+        .ItemsWrapper {
             margin-top: 80px;
 
-            .lunchRows{
+            .lunchRows {
                 flex-direction: column;
                 row-gap: 64px;
 
-                .lunchCols{
+                .lunchCols {
                     width: 100%;
-                    
-                    .lunch{
+
+                    .lunch {
                         width: 100%;
                         height: 190px !important;
                         padding: 0 8px 8px 12px !important;
@@ -359,7 +360,7 @@ export default {
                     }
                 }
 
-                &.secondRow{
+                &.secondRow {
                     display: none;
                 }
             }
@@ -368,22 +369,22 @@ export default {
 }
 
 @media screen and (max-width: 767px) {
-    .allItemsContainer{
+    .allItemsContainer {
 
-        .ItemsWrapper{
-            .lunchRows{
+        .ItemsWrapper {
+            .lunchRows {
 
-                &.firstRow{
+                &.firstRow {
                     row-gap: 96px;
                 }
 
-                .lunchCols{
-                    .lunch{
+                .lunchCols {
+                    .lunch {
                         max-width: 100% !important;
                     }
                 }
 
-                &.secondRow{
+                &.secondRow {
                     display: none;
                 }
             }
